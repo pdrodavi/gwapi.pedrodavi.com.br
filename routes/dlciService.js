@@ -29,6 +29,10 @@ router.post('/v1/crypt', (req, res) => {
       }
   } */
 
+  /* #swagger.security = [{
+               "apiKeyAuth": ['83365837234061750124']
+        }] */
+
     api.post(BASE_URL+'/ci', req.body).then(resp => {
         res.send(resp.data)
     })
@@ -57,6 +61,10 @@ router.post('/v1/decrypt', (req, res) => {
             $sequence: 'string'
       }
   } */
+
+  /* #swagger.security = [{
+               "apiKeyAuth": ['83365837234061750124']
+        }] */
 
     api.post(BASE_URL+'/di', req.body).then(resp => {
         res.send(resp.data)

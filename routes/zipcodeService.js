@@ -14,6 +14,10 @@ router.get('/v1/address/:zipcode', (req, res) => {
         #swagger.tags = ['Query']
     */
 
+    /* #swagger.security = [{
+               "apiKeyAuth": ['83365837234061750124']
+        }] */
+
     api.get(req.params.zipcode + '/json/').then(resp => {
         res.send(resp.data)
     })

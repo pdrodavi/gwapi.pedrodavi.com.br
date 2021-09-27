@@ -14,7 +14,11 @@ router.get('/v1/scan/domain/:domain/:apikey', (req, res) => {
         #swagger.tags = ['Security']
     */  
 
-    /* #swagger.responses[200] */    
+    /* #swagger.responses[200] */  
+    
+    /* #swagger.security = [{
+               "apiKeyAuth": ['83365837234061750124']
+        }] */
 
     let apikey = req.params.apikey
     let domain = req.params.domain    

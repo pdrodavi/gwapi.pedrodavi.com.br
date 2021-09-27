@@ -12,6 +12,14 @@
     "https",
     "http"
   ],
+  "securityDefinitions": {
+    "apiKeyAuth": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "X-API-KEY",
+      "description": "any description..."
+    }
+  },
   "consumes": [],
   "produces": [],
   "paths": {
@@ -68,7 +76,14 @@
             },
             "description": "OK"
           }
-        }
+        },
+        "security": [
+          {
+            "apiKeyAuth": [
+              "83365837234061750124"
+            ]
+          }
+        ]
       }
     },
     "/v1/crypt": {
@@ -132,7 +147,14 @@
             },
             "description": "OK"
           }
-        }
+        },
+        "security": [
+          {
+            "apiKeyAuth": [
+              "83365837234061750124"
+            ]
+          }
+        ]
       }
     },
     "/v1/decrypt": {
@@ -196,7 +218,14 @@
             },
             "description": "OK"
           }
-        }
+        },
+        "security": [
+          {
+            "apiKeyAuth": [
+              "83365837234061750124"
+            ]
+          }
+        ]
       }
     },
     "/v1/address/{zipcode}": {
@@ -218,7 +247,14 @@
             "example": "58900000"
           }
         ],
-        "responses": {}
+        "responses": {},
+        "security": [
+          {
+            "apiKeyAuth": [
+              "83365837234061750124"
+            ]
+          }
+        ]
       }
     },
     "/v1/btc/value/{currency}": {
@@ -279,7 +315,14 @@
             },
             "description": "OK"
           }
-        }
+        },
+        "security": [
+          {
+            "apiKeyAuth": [
+              "83365837234061750124"
+            ]
+          }
+        ]
       }
     },
     "/v1/scan/domain/{domain}/{apikey}": {
@@ -313,7 +356,14 @@
           "200": {
             "description": "OK"
           }
-        }
+        },
+        "security": [
+          {
+            "apiKeyAuth": [
+              "83365837234061750124"
+            ]
+          }
+        ]
       }
     }
   },

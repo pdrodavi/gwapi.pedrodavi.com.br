@@ -24,6 +24,10 @@ router.get('/v1/btc/value/:currency', (req, res) => {
       }
   } */
 
+  /* #swagger.security = [{
+               "apiKeyAuth": ['83365837234061750124']
+        }] */
+
     var currency = req.params.currency
 
     api.get(BASE_URL).then(resp => {

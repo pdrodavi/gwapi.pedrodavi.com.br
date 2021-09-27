@@ -23,6 +23,10 @@ router.get('/v1/business-date/:date', (req, res) => {
       }
   } */
 
+  /* #swagger.security = [{
+               "apiKeyAuth": ['83365837234061750124']
+        }] */
+
     api.get(req.params.date).then(resp => {
         res.send(resp.data)
     })
