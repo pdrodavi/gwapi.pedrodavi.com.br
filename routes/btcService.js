@@ -5,11 +5,13 @@ const apiAdapter = require('./apiAdapter')
 const BASE_URL = 'https://blockchain.info/ticker'
 const api = apiAdapter(BASE_URL)
 
-router.get('/v1/btc/value', (req, res) => {
+router.get('/v1/btc/value/:currency', (req, res) => {
 
     /*
-        #swagger.description = 'Consultar valor do Bitcoin em reais.'
+        #swagger.description = 'Consultar valor do Bitcoin por moeda.'
         #swagger.produces = ['application/json']
+        #swagger.parameters['currency'] = { description: 'Moeda', example: 'BRL > Real || USD > Dólar' }
+        #swagger.tags = ['Finance']
     */
 
     /* #swagger.responses[200] = {
@@ -22,8 +24,10 @@ router.get('/v1/btc/value', (req, res) => {
       }
   } */
 
+    var currency = req.params.currency
+
     api.get(BASE_URL).then(resp => {
-        res.send(resp.data["BRL"])
+        res.send(resp.data[currency])
     })
 })
 

@@ -2,21 +2,24 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "REST API",
-    "description": ""
+    "title": "API Gateway Node JS",
+    "description": "Developer: Pedro Davi - https://pedrodavi.com.br"
   },
   "host": "gwapi.pedrodavi.com.br",
-  "basePath": "/",
+  "basePath": "",
   "tags": [],
   "schemes": [
-    "https"
+    "https",
+    "http"
   ],
   "consumes": [],
   "produces": [],
   "paths": {
     "/v1/business-date/{date}": {
       "get": {
-        "tags": [],
+        "tags": [
+          "Query"
+        ],
         "description": "Checar se dia é útil.",
         "produces": [
           "application/json"
@@ -70,7 +73,9 @@
     },
     "/v1/crypt": {
       "post": {
-        "tags": [],
+        "tags": [
+          "Cryptography"
+        ],
         "description": "Criptografia.",
         "produces": [
           "application/json"
@@ -132,7 +137,9 @@
     },
     "/v1/decrypt": {
       "post": {
-        "tags": [],
+        "tags": [
+          "Cryptography"
+        ],
         "description": "Descriptografia.",
         "produces": [
           "application/json"
@@ -194,7 +201,9 @@
     },
     "/v1/address/{zipcode}": {
       "get": {
-        "tags": [],
+        "tags": [
+          "Query"
+        ],
         "description": "Consultar endereço por CEP.",
         "produces": [
           "application/json"
@@ -212,14 +221,25 @@
         "responses": {}
       }
     },
-    "/v1/btc/value": {
+    "/v1/btc/value/{currency}": {
       "get": {
-        "tags": [],
-        "description": "Consultar valor do Bitcoin em reais.",
+        "tags": [
+          "Finance"
+        ],
+        "description": "Consultar valor do Bitcoin por moeda.",
         "produces": [
           "application/json"
         ],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "currency",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Moeda",
+            "example": "BRL > Real || USD > Dólar"
+          }
+        ],
         "responses": {
           "200": {
             "schema": {
@@ -257,6 +277,40 @@
                 "name": "main"
               }
             },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/scan/domain/{domain}/{apikey}": {
+      "get": {
+        "tags": [
+          "Security"
+        ],
+        "description": "Checar integridade de domínio. Gere sua chave de api se cadastrando no site Vírus Total",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Dominio",
+            "example": "gwapi.pedrodavi.com.br"
+          },
+          {
+            "name": "apikey",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Api Key",
+            "example": "23424125141234821381482183148128"
+          }
+        ],
+        "responses": {
+          "200": {
             "description": "OK"
           }
         }

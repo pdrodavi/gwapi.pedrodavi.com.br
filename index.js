@@ -10,6 +10,9 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', (req, res) => {
+    /*
+        #swagger.ignore = true
+    */
     res.redirect('/doc');
 })
 

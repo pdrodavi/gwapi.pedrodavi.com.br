@@ -10,6 +10,7 @@ router.post('/v1/crypt', (req, res) => {
     /*
         #swagger.description = 'Criptografia.'
         #swagger.produces = ['application/json']
+        #swagger.tags = ['Cryptography']
     */
 
     /*    #swagger.parameters['Request'] = {
@@ -38,6 +39,7 @@ router.post('/v1/decrypt', (req, res) => {
     /*
         #swagger.description = 'Descriptografia.'
         #swagger.produces = ['application/json']
+        #swagger.tags = ['Cryptography']
     */
 
     /*    #swagger.parameters['Request'] = {
