@@ -3,7 +3,7 @@
   "info": {
     "version": "1.0.0",
     "title": "REST API",
-    "description": "Developed by Pedro Davi https://pedrodavi.com.br"
+    "description": ""
   },
   "host": "gwapi.pedrodavi.com.br",
   "basePath": "/",
@@ -210,6 +210,56 @@
           }
         ],
         "responses": {}
+      }
+    },
+    "/v1/btc/value": {
+      "get": {
+        "tags": [],
+        "description": "Consultar valor do Bitcoin em reais.",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "15m": {
+                  "type": "string",
+                  "example": ""
+                },
+                "last": {
+                  "type": "string",
+                  "example": ""
+                },
+                "buy": {
+                  "type": "string",
+                  "example": ""
+                },
+                "sell": {
+                  "type": "string",
+                  "example": ""
+                },
+                "symbol": {
+                  "type": "string",
+                  "example": ""
+                }
+              },
+              "required": [
+                "15m",
+                "last",
+                "buy",
+                "sell",
+                "symbol"
+              ],
+              "xml": {
+                "name": "main"
+              }
+            },
+            "description": "OK"
+          }
+        }
       }
     }
   },
