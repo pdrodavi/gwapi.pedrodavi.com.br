@@ -40,6 +40,17 @@
             "type": "string",
             "description": "Data",
             "example": "29042022"
+          },
+          {
+            "name": "appkey\r",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "AppKey",
+            "type": "string"
           }
         ],
         "responses": {
@@ -75,6 +86,9 @@
               }
             },
             "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
           }
         },
         "security": [
@@ -97,6 +111,11 @@
         ],
         "parameters": [
           {
+            "name": "appkey\r",
+            "in": "query",
+            "type": "string"
+          },
+          {
             "name": "Request",
             "in": "body",
             "schema": {
@@ -111,6 +130,12 @@
                 "sequence"
               ]
             }
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "AppKey",
+            "type": "string"
           }
         ],
         "responses": {
@@ -146,6 +171,9 @@
               }
             },
             "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
           }
         },
         "security": [
@@ -167,6 +195,11 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "name": "appkey\r",
+            "in": "query",
+            "type": "string"
+          },
           {
             "name": "Request",
             "in": "body",
@@ -217,6 +250,9 @@
               }
             },
             "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
           }
         },
         "security": [
@@ -245,9 +281,24 @@
             "type": "string",
             "description": "CEP",
             "example": "58900000"
+          },
+          {
+            "name": "appkey\r",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "AppKey",
+            "type": "string"
           }
         ],
-        "responses": {},
+        "responses": {
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
         "security": [
           {
             "apiKeyAuth": [
@@ -274,6 +325,17 @@
             "type": "string",
             "description": "Moeda",
             "example": "BRL > Real || USD > Dólar"
+          },
+          {
+            "name": "appkey\r",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "AppKey",
+            "type": "string"
           }
         ],
         "responses": {
@@ -314,6 +376,9 @@
               }
             },
             "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
           }
         },
         "security": [
@@ -350,11 +415,25 @@
             "type": "string",
             "description": "Api Key",
             "example": "23424125141234821381482183148128"
+          },
+          {
+            "name": "appkey\r",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "AppKey",
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
           }
         },
         "security": [
