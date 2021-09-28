@@ -16,6 +16,10 @@ router.get('/v1/business-date/:date', verifyAppKey, (req, res, next) => {
         #swagger.tags = ['Query']
     */
 
+    /*
+        #swagger.parameters['appkey'] = { description: 'AppKey', example: '8801084840929484' }
+    */      
+
     /* #swagger.responses[200] = {
       schema: {
             $data: '',

@@ -5,7 +5,7 @@
     "title": "API Gateway Node JS",
     "description": "Developer: Pedro Davi - https://pedrodavi.com.br"
   },
-  "host": "gwapi.pedrodavi.com.br",
+  "host": "",
   "basePath": "",
   "tags": [],
   "schemes": [
@@ -34,7 +34,9 @@
             "example": "29042022"
           },
           {
-            "name": "appkey\r",
+            "name": "appkey",
+            "description": "AppKey",
+            "example": "8801084840929484",
             "in": "query",
             "type": "string"
           }
@@ -72,9 +74,6 @@
               }
             },
             "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
           }
         }
       }
@@ -90,11 +89,6 @@
         ],
         "parameters": [
           {
-            "name": "appkey\r",
-            "in": "query",
-            "type": "string"
-          },
-          {
             "name": "Request",
             "in": "body",
             "schema": {
@@ -109,6 +103,13 @@
                 "sequence"
               ]
             }
+          },
+          {
+            "name": "appkey",
+            "description": "AppKey",
+            "example": "8801084840929484",
+            "in": "query",
+            "type": "string"
           }
         ],
         "responses": {
@@ -144,9 +145,6 @@
               }
             },
             "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
           }
         }
       }
@@ -161,11 +159,6 @@
           "application/json"
         ],
         "parameters": [
-          {
-            "name": "appkey\r",
-            "in": "query",
-            "type": "string"
-          },
           {
             "name": "Request",
             "in": "body",
@@ -216,9 +209,6 @@
               }
             },
             "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
           }
         }
       }
@@ -242,16 +232,14 @@
             "example": "58900000"
           },
           {
-            "name": "appkey\r",
+            "name": "appkey",
+            "description": "AppKey",
+            "example": "8801084840929484",
             "in": "query",
             "type": "string"
           }
         ],
-        "responses": {
-          "401": {
-            "description": "Unauthorized"
-          }
-        }
+        "responses": {}
       }
     },
     "/v1/btc/value/{currency}": {
@@ -273,7 +261,9 @@
             "example": "BRL > Real || USD > Dólar"
           },
           {
-            "name": "appkey\r",
+            "name": "appkey",
+            "description": "AppKey",
+            "example": "8801084840929484",
             "in": "query",
             "type": "string"
           }
@@ -316,9 +306,6 @@
               }
             },
             "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
           }
         }
       }
@@ -350,7 +337,9 @@
             "example": "23424125141234821381482183148128"
           },
           {
-            "name": "appkey\r",
+            "name": "appkey",
+            "description": "AppKey",
+            "example": "8801084840929484",
             "in": "query",
             "type": "string"
           }
@@ -358,11 +347,37 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
           }
         }
+      }
+    },
+    "/v1/covid/uf/{uf}": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "description": "Consultar estatísticas do Covid por Estado.",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "uf",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "UF",
+            "example": "PB"
+          },
+          {
+            "name": "appkey",
+            "description": "AppKey",
+            "example": "8801084840929484",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {}
       }
     }
   },
