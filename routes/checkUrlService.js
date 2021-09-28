@@ -2,9 +2,11 @@ const express = require('express');
 const router = express.Router()
 const axios = require('axios');
 
+const verifyAppKey = require('../config/security/verifyAppKey')
+
 const BASE_URL = 'https://www.virustotal.com/api/v3/domains'
 
-router.get('/v1/scan/domain/:domain/:apikey', (req, res) => {
+router.get('/v1/scan/domain/:domain/:apikey', verifyAppKey, (req, res, next) => {
 
     /*
         #swagger.description = 'Checar integridade de domínio. Gere sua chave de api se cadastrando no site Vírus Total'

@@ -2,10 +2,12 @@ const express = require('express');
 const router = express.Router()
 const apiAdapter = require('./apiAdapter')
 
+const verifyAppKey = require('../config/security/verifyAppKey')
+
 const BASE_URL = 'https://dlci.idevoc.com.br/api/dlci/'
 const api = apiAdapter(BASE_URL)
 
-router.post('/v1/crypt', (req, res) => {
+router.post('/v1/crypt', verifyAppKey, (req, res, next) => {
 
     /*
         #swagger.description = 'Criptografia.'
@@ -38,7 +40,7 @@ router.post('/v1/crypt', (req, res) => {
     })
 })
 
-router.post('/v1/decrypt', (req, res) => {
+router.post('/v1/decrypt', verifyAppKey, (req, res, next) => {
 
     /*
         #swagger.description = 'Descriptografia.'

@@ -2,10 +2,12 @@ const express = require('express');
 const router = express.Router()
 const apiAdapter = require('./apiAdapter')
 
+const verifyAppKey = require('../config/security/verifyAppKey')
+
 const BASE_URL = 'https://blockchain.info/ticker'
 const api = apiAdapter(BASE_URL)
 
-router.get('/v1/btc/value/:currency', (req, res) => {
+router.get('/v1/btc/value/:currency', verifyAppKey, (req, res, next) => {
 
     /*
         #swagger.description = 'Consultar valor do Bitcoin por moeda.'

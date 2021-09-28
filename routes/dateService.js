@@ -2,10 +2,12 @@ const express = require('express');
 const router = express.Router()
 const apiAdapter = require('./apiAdapter')
 
+const verifyAppKey = require('../config/security/verifyAppKey')
+
 const BASE_URL = 'https://apidate.herokuapp.com/api/check-day/'
 const api = apiAdapter(BASE_URL)
 
-router.get('/v1/business-date/:date', (req, res) => {
+router.get('/v1/business-date/:date', verifyAppKey, (req, res, next) => {
 
     /*
         #swagger.description = 'Checar se dia é útil.'
