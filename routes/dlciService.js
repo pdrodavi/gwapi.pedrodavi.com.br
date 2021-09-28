@@ -29,12 +29,7 @@ router.post('/v1/crypt', verifyAppKey, (req, res, next) => {
             $publicKey: '',
             $privateKey: ''
       }
-  } */
-
-    /*  #swagger.parameters['appkey'] = {
-                in: 'query',
-                description: 'AppKey'
-        } */        
+  } */      
 
     api.post(BASE_URL+'/ci', req.body).then(resp => {
         res.send(resp.data)
@@ -64,10 +59,6 @@ router.post('/v1/decrypt', verifyAppKey, (req, res, next) => {
             $sequence: 'string'
       }
   } */
-
-  /* #swagger.security = [{
-               "apiKeyAuth": ['83365837234061750124']
-        }] */
 
     api.post(BASE_URL+'/di', req.body).then(resp => {
         res.send(resp.data)

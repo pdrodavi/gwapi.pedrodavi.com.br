@@ -16,12 +16,7 @@ router.get('/v1/scan/domain/:domain/:apikey', verifyAppKey, (req, res, next) => 
         #swagger.tags = ['Security']
     */  
 
-    /* #swagger.responses[200] */  
-    
-    /*  #swagger.parameters['appkey'] = {
-                in: 'query',
-                description: 'AppKey'
-        } */        
+    /* #swagger.responses[200] */       
 
     let apikey = req.params.apikey
     let domain = req.params.domain    

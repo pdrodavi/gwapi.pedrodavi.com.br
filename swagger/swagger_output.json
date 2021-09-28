@@ -37,12 +37,6 @@
             "name": "appkey\r",
             "in": "query",
             "type": "string"
-          },
-          {
-            "name": "appkey",
-            "in": "query",
-            "description": "AppKey",
-            "type": "string"
           }
         ],
         "responses": {
@@ -115,12 +109,6 @@
                 "sequence"
               ]
             }
-          },
-          {
-            "name": "appkey",
-            "in": "query",
-            "description": "AppKey",
-            "type": "string"
           }
         ],
         "responses": {
@@ -232,14 +220,7 @@
           "401": {
             "description": "Unauthorized"
           }
-        },
-        "security": [
-          {
-            "apiKeyAuth": [
-              "83365837234061750124"
-            ]
-          }
-        ]
+        }
       }
     },
     "/v1/address/{zipcode}": {
@@ -263,12 +244,6 @@
           {
             "name": "appkey\r",
             "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "appkey",
-            "in": "query",
-            "description": "AppKey",
             "type": "string"
           }
         ],
@@ -300,12 +275,6 @@
           {
             "name": "appkey\r",
             "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "appkey",
-            "in": "query",
-            "description": "AppKey",
             "type": "string"
           }
         ],
@@ -383,12 +352,6 @@
           {
             "name": "appkey\r",
             "in": "query",
-            "type": "string"
-          },
-          {
-            "name": "appkey",
-            "in": "query",
-            "description": "AppKey",
             "type": "string"
           }
         ],

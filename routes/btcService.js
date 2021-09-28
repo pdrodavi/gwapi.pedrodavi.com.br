@@ -26,11 +26,6 @@ router.get('/v1/btc/value/:currency', verifyAppKey, (req, res, next) => {
       }
   } */
 
-    /*  #swagger.parameters['appkey'] = {
-                in: 'query',
-                description: 'AppKey'
-        } */    
-
     var currency = req.params.currency
 
     api.get(BASE_URL).then(resp => {

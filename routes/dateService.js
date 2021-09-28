@@ -25,11 +25,6 @@ router.get('/v1/business-date/:date', verifyAppKey, (req, res, next) => {
       }
   } */
 
-    /*  #swagger.parameters['appkey'] = {
-                in: 'query',
-                description: 'AppKey'
-        } */        
-
     api.get(req.params.date).then(resp => {
         res.send(resp.data)
     })

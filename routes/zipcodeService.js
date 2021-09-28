@@ -14,12 +14,7 @@ router.get('/v1/address/:zipcode', verifyAppKey, (req, res, next) => {
         #swagger.produces = ['application/json']
         #swagger.parameters['zipcode'] = { description: 'CEP', example: '58900000' }
         #swagger.tags = ['Query']
-    */
-
-    /*  #swagger.parameters['appkey'] = {
-                in: 'query',
-                description: 'AppKey'
-        } */        
+    */     
 
     api.get(req.params.zipcode + '/json/').then(resp => {
         res.send(resp.data)
