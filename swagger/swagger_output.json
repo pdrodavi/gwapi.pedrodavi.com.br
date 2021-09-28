@@ -12,14 +12,6 @@
     "https",
     "http"
   ],
-  "securityDefinitions": {
-    "apiKeyAuth": {
-      "type": "apiKey",
-      "in": "query",
-      "name": "X-API-KEY",
-      "description": "any description..."
-    }
-  },
   "consumes": [],
   "produces": [],
   "paths": {

@@ -12,15 +12,7 @@ const doc = {
     "schemes": [
         "https",
         "http"
-    ],
-    securityDefinitions: {
-      apiKeyAuth: {
-        type: 'apiKey',
-        in: 'query', // can be 'header', 'query' or 'cookie'
-        name: 'X-API-KEY', // name of the header, query parameter or cookie
-        description: 'any description...'
-      },
-    }
+    ]
 };
 
 const outputFile = './swagger/swagger_output.json';
