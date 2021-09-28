@@ -90,14 +90,7 @@
           "401": {
             "description": "Unauthorized"
           }
-        },
-        "security": [
-          {
-            "apiKeyAuth": [
-              "83365837234061750124"
-            ]
-          }
-        ]
+        }
       }
     },
     "/v1/crypt": {
@@ -175,14 +168,7 @@
           "401": {
             "description": "Unauthorized"
           }
-        },
-        "security": [
-          {
-            "apiKeyAuth": [
-              "83365837234061750124"
-            ]
-          }
-        ]
+        }
       }
     },
     "/v1/decrypt": {
@@ -298,14 +284,7 @@
           "401": {
             "description": "Unauthorized"
           }
-        },
-        "security": [
-          {
-            "apiKeyAuth": [
-              "83365837234061750124"
-            ]
-          }
-        ]
+        }
       }
     },
     "/v1/btc/value/{currency}": {
@@ -380,14 +359,7 @@
           "401": {
             "description": "Unauthorized"
           }
-        },
-        "security": [
-          {
-            "apiKeyAuth": [
-              "83365837234061750124"
-            ]
-          }
-        ]
+        }
       }
     },
     "/v1/scan/domain/{domain}/{apikey}": {
@@ -435,14 +407,7 @@
           "401": {
             "description": "Unauthorized"
           }
-        },
-        "security": [
-          {
-            "apiKeyAuth": [
-              "83365837234061750124"
-            ]
-          }
-        ]
+        }
       }
     }
   },

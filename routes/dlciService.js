@@ -31,10 +31,6 @@ router.post('/v1/crypt', verifyAppKey, (req, res, next) => {
       }
   } */
 
-  /* #swagger.security = [{
-               "apiKeyAuth": ['83365837234061750124']
-        }] */
-
     /*  #swagger.parameters['appkey'] = {
                 in: 'query',
                 description: 'AppKey'

@@ -16,10 +16,6 @@ router.get('/v1/address/:zipcode', verifyAppKey, (req, res, next) => {
         #swagger.tags = ['Query']
     */
 
-    /* #swagger.security = [{
-               "apiKeyAuth": ['83365837234061750124']
-        }] */
-
     /*  #swagger.parameters['appkey'] = {
                 in: 'query',
                 description: 'AppKey'
