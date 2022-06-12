@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('./swagger/swagger_output.json');
 
+require("dotenv-safe").config();
+
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }));
